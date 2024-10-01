@@ -270,8 +270,8 @@ const StartScreen: React.FC<QuizProps> = ({ setStart, setScore, setRescpostaCorr
     <div>
       {indicePergunta < perguntas.length ? (
         <div className="flex flex-col">
-          <h2 className=" font-bold text-xl mb-4">{perguntas[indicePergunta].pergunta}</h2>
-           
+           <h2 className="text-3xl m-2">Pontuação: {pontuacao}</h2>
+          <h3 className=" font-bold text-xl mb-4">{perguntas[indicePergunta].pergunta}</h3>
           {perguntas[indicePergunta].opcoesDeResposta.map((opcao) => (
             
             <button className="bg-green-600 te p-3 m-2 rounded text-white hover:bg-green-700 transition transform hover:scale-105" key={opcao} onClick={() => verificarResposta(opcao)}>
